@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+    {{#if label}}
+        <div class="panel-heading">{{{label}}}</div>
+    {{/if}}
+
+    {{#if isLoading}}
+        {{partial 'eureka-loading'}}
+    {{else}}
+        <div class="panel-body">
+            {{#masonry-grid isFitWidth=true}}
+                {{#each data as |image|}}
+                    <div class="item">
+                        <div class="row">
+                          <div class="col-xs-12">
+                            <a href="{{image.src}}" target="_blank" class="thumbnail">
+                                <img src="{{image.thumbnail}}" />
+                            </a>
+                            <div class="caption">
+                                {{#if image.title}}
+                                    <h5>{{image.title}}</h5>
+                                {{/if}}
+                                {{#if image.description}}
+                                    <p>{{image.description}}</p>
+                                {{/if}}
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                {{/each}}
+            {{/masonry-grid}}
+        </div>
+    {{/if}}
+</div>
