@@ -1,6 +1,6 @@
 {
   "name": "eureka-widget-collection-gallery",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Gallery widget for eureka collections",
   "directories": {
     "doc": "doc",
